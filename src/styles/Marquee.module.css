@@ -1,0 +1,37 @@
+.wrapper {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.track {
+  display: inline-flex;
+  gap: 2rem;
+  animation: scroll 40s linear infinite;
+}
+
+.wrapper:hover .track {
+  animation-play-state: paused;
+}
+
+.item {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.item:hover {
+  color: var(--white);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

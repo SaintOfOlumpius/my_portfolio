@@ -1,0 +1,27 @@
+.dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--white);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+  mix-blend-mode: difference;
+}
+
+.dot.expanded {
+  width: 36px;
+  height: 36px;
+  background: rgba(242, 239, 232, 0.15);
+  border: 1px solid rgba(242, 239, 232, 0.4);
+}
+
+@media (hover: none) {
+  .dot {
+    display: none;
+  }
+}
